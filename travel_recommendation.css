@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 nav {
-    background-color: #f0f0f0;
+    background-color: #f0f0ff;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -21,7 +21,7 @@ nav {
   
   nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 20px;
   }
   
   nav a {
@@ -55,22 +55,22 @@ nav {
     width: 200px;
     padding: 5px;
   }
-  
+  /* comportamento da cor e forma dos botões */
   button {
-    padding: 7px 15px;
-    background-color: #4CAF50;
+    padding: 5px 15px;
+    background-color: #110eac;
     color: white;
-    border: none;
+    border: round;
     cursor: pointer;
   }
-  
+  /* altera cor conforme coloca-se o ponteiro do mouse */
   button:hover {
-    background-color: #45a049;
+    background-color: #10c9c9;
   }
   
   /* Basic CSS for the report section */
   h2 {
-    margin-top: 30px;
+    margin-top: 10px;
   }
   
   #report,#result {
