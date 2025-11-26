@@ -23,9 +23,9 @@
         <li>
           <input
             type="text"
-            style="border: 2px solid red; padding: 10px; font-size: 12px"
+            style="border: 2px solid red; padding: 10px; font-size: 15px"
             id="destinationInput"
-            placeholder="Enter a destination"
+            placeholder="Enter destination"
           />
         </li>
         <li><button id="btnSearch">Search</button></li>
@@ -37,5 +37,6 @@
       const menuToggle = document.querySelector(".menu-toggle")
       const navLinks = document.querySelector("nav ul")
     </script>
-  </body>
+    resultsDiv.innerHTML = `<p>You searched for: <strong>${query}</strong></p>`;
+</body>
 </html>

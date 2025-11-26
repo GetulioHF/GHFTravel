@@ -1,20 +1,20 @@
 const btnSearch = document.getElementById("btnSearch")
-const patients = []
+const destinationInput = []
 
-function resetForm() {
+function btnClear() {
   document.getElementById("destinationInput").value = ""
-  document.querySelector('input[name="gender"]:checked').checked = false
+  document.querySelector('input[name="destinationInput"]:checked').checked = false
 }
 
-function searchCondition() {
+function btnSearch() {
   const input = document.getElementById("destinationInput").value.toLowerCase()
   const resultDiv = document.getElementById("result")
   resultDiv.innerHTML = ""
 
-  fetch("travel_recommendation.js")
+  fetch("travel_recommendation.json")
     .then((response) => response.json())
     .then((data) => {
-      const condition = data.conditions.find(
+      const description = data.description.find(
         (item) => item.name.toLowerCase() === input,
       )
 
@@ -23,11 +23,11 @@ function searchCondition() {
         const prevention = condition.prevention.join(", ")
         const treatment = condition.treatment
 
-        resultDiv.innerHTML += `<h2>${condition.name}</h2>`
-        resultDiv.innerHTML += `<img src="${condition.imagesrc}" alt="hjh">`
-        resultDiv.innerHTML += `<p><strong>Symptoms:</strong> ${symptoms}</p>`
+        resultDiv.innerHTML += `<h2>${description.destinationInput}</h2>`
+//        resultDiv.innerHTML += `<img src="${condition.imagesrc}" alt="hjh">`
+        resultDiv.innerHTML += `<p><strong>Description:</strong> ${destinationInput}</p>`
       } else {
-        resultDiv.innerHTML = "Condition not found."
+        resultDiv.innerHTML = "Destination not found."
       }
     })
     .catch((error) => {
@@ -44,18 +44,6 @@ function generateReport() {
     Thyroid: 0,
     "High Blood Pressure": 0,
   }
-  const genderConditionsCount = {
-    Male: {
-      Diabetes: 0,
-      Thyroid: 0,
-      "High Blood Pressure": 0,
-    },
-    Female: {
-      Diabetes: 0,
-      Thyroid: 0,
-      "High Blood Pressure": 0,
-    },
-  }
 
   for (const patient of patients) {
     conditionsCount[patient.condition]++
@@ -68,14 +56,6 @@ function generateReport() {
     report.innerHTML += `${condition}: ${conditionsCount[condition]}<br>`
   }
 
-  report.innerHTML += `<br>Gender-Based Conditions:<br>`
-  for (const gender in genderConditionsCount) {
-    report.innerHTML += `${gender}:<br>`
-    for (const condition in genderConditionsCount[gender]) {
-      report.innerHTML += `&nbsp;&nbsp;${condition}: ${genderConditionsCount[gender][condition]}<br>`
-    }
-  }
 }
 
-addPatientButton.addEventListener("click", addPatient)
-
+// addPatientButton.addEventListener("click", addPatient)

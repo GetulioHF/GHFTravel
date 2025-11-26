@@ -23,6 +23,8 @@
   
   nav ul li {
     display: inline;
+    font-style: Bold;
+    font-family: 'Lucida Sans';
     margin-right: 20px;
   }
   
