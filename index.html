@@ -5,16 +5,41 @@
     <title>GHF Travel</title>
     <link rel="stylesheet" href="./travel_recommendation.css">
     <style>
+        h1 {
+            display: inline-block;        /* Makes the border fit the text */
+            padding: 10px 20px;          /* Space around the text */
+            border: 2px solid #333;      /* Border around the text */
+            border-color: red;
+            border-radius: 20px;         /* Rounded corners */
+            background-color: transparent;   /* Optional background */
+            font-family: Arial, sans-serif;
+        }
         body {
             background-image: url('Travel_image.jpeg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
         }
+        /* Center text horizontally and vertically NÃO PRECISO DELE DEPOIS */
+        .center-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            font-size: 24px;
+            background-color: #f0f0f0;
+        }
+        /* Absolute positioning */
+        .absolute-text {
+            position: absolute;
+            top: 200px;
+            left: 100px;
+            font-size: 25px;
+            color: white;
+        }
     </style>
 </head>
 <body>
-   
     <nav>
         <div class="logo">
             <img
@@ -23,7 +48,6 @@
               width="100"
               height="50"
             /><h3>GHF Travel</h3></div>
-      
         <ul>
         <li><a href="./index.html" id="home">Home </a></li>
         <li><a href="./index.html" id="home">About Us </a></li>
@@ -34,42 +58,15 @@
         </li>
         </ul>
     </nav>
-
-<div class="container">
-<div class="analysisForm">
-<div>
-
-<label for="name">Name:</label>
-<input type="text" id="name">
-</div>
-<div>
-<label>Gender:</label>
-<label for="male">Male</label>
-<input type="radio" name="gender" id="male" value="Male">
-<label for="female">Female</label>
-<input type="radio" name="gender" id="female" value="Female">
-</div>
-<div>
-<label for="age">Age:</label>
-<input type="number" id="age">
-</div>
-<div>
-<label for="condition">Condition:</label>
-<select id="condition">
-  <option value="">Select condition</option>
-  <option value="Diabetes">Diabetes</option>
-  <option value="Thyroid">Thyroid</option>
-  <option value="High Blood Pressure">High Blood Pressure</option>
-</select>
-</div>
-<button id="addPatient">Add Patient</button>
-<h2>Analysis Report</h2>
-<div id="report"></div>
-</div>
-<div class="searchCondition">
-    <div id="result"></div>
-</div>
-</div>
-<script src="./travel_recommendation.js"></script>
+    <div class="container">
+        <div class="absolute-text">
+            <h1> <p>FIND YOUR</p> <p>SPECIAL PLACE</p> </h1>
+            <h5> Seek out new experiences and cherish them in your memory for a lifetime </h5>
+        <div id="report"></div>
+    </div>
+    <div class="searchCondition">
+        <div id="result"></div>
+    </div>
+    <script src="./travel_recommendation.js"></script>
 </body>
 </html>
