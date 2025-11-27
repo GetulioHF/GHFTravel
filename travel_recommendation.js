@@ -6,25 +6,23 @@ function btnClear() {
   document.querySelector('input[name="destinationInput"]:checked').checked = false
 }
 
-function btnSearch() {
+function searchCondition() {
   const input = document.getElementById("destinationInput").value.toLowerCase()
   const resultDiv = document.getElementById("result")
   resultDiv.innerHTML = ""
 
   fetch("travel_recommendation.json")
-    .then((response) => response.json())
-    .then((data) => {
-      const description = data.description.find(
-        (item) => item.name.toLowerCase() === input,
-      )
+    .then(response => response.json())
+    .then(data => {
+      const description = data.countries.find((item) => item.name.toLowerCase() === input);
 
-      if (condition) {
+      if (description) {
         const symptoms = condition.symptoms.join(", ")
         const prevention = condition.prevention.join(", ")
         const treatment = condition.treatment
 
         resultDiv.innerHTML += `<h2>${description.destinationInput}</h2>`
-//        resultDiv.innerHTML += `<img src="${condition.imagesrc}" alt="hjh">`
+        resultDiv.innerHTML += `<img src="${condition.imagesrc}" alt="hjh">`
         resultDiv.innerHTML += `<p><strong>Description:</strong> ${destinationInput}</p>`
       } else {
         resultDiv.innerHTML = "Destination not found."
