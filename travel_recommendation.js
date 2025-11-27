@@ -11,21 +11,24 @@ function searchCondition() {
   const resultDiv = document.getElementById("result")
   resultDiv.innerHTML = ""
 
-  fetch("travel_recommendation.json")
+  fetch('travel_recommendation.json')
     .then(response => response.json())
     .then(data => {
       const description = data.countries.find((item) => item.name.toLowerCase() === input);
 
       if (description) {
-        const symptoms = condition.symptoms.join(", ")
-        const prevention = condition.prevention.join(", ")
-        const treatment = condition.treatment
+        const name = description.name
+        const cities = description.cities
 
-        resultDiv.innerHTML += `<h2>${description.destinationInput}</h2>`
-        resultDiv.innerHTML += `<img src="${condition.imagesrc}" alt="hjh">`
-        resultDiv.innerHTML += `<p><strong>Description:</strong> ${destinationInput}</p>`
+//        const symptoms = condition.symptoms.join(", ")
+//        const prevention = condition.prevention.join(", ")
+//        const treatment = condition.treatment
+
+        resultDiv.innerHTML += `<h2>${description.name}</h2>`
+//        resultDiv.innerHTML += `<img src="${condition.imagesrc}" alt="hjh">`
+//        resultDiv.innerHTML += `<p><strong>Description:</strong> ${destinationInput}</p>`
       } else {
-        resultDiv.innerHTML = "Destination not found."
+        resultDiv.innerHTML = "GETULIO - Destination not found."
       }
     })
     .catch((error) => {
