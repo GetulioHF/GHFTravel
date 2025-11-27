@@ -6,7 +6,7 @@ function btnClear() {
   document.querySelector('input[name="destinationInput"]:checked').checked = false
 }
 
-function searchCondition() {
+function searchCountry() {
   const input = document.getElementById("destinationInput").value.toLowerCase()
   const resultDiv = document.getElementById("result")
   resultDiv.innerHTML = ""
@@ -14,19 +14,22 @@ function searchCondition() {
   fetch('travel_recommendation.json')
     .then(response => response.json())
     .then(data => {
-      const description = data.countries.find((item) => item.name.toLowerCase() === input);
+      const country = data.countries.find((item) => item.name.toLowerCase() === input);
 
-      if (description) {
-        const name = description.name
-        const cities = description.cities
-
-//        const symptoms = condition.symptoms.join(", ")
-//        const prevention = condition.prevention.join(", ")
-//        const treatment = condition.treatment
-
-        resultDiv.innerHTML += `<h2>${description.name}</h2>`
-//        resultDiv.innerHTML += `<img src="${condition.imagesrc}" alt="hjh">`
-//        resultDiv.innerHTML += `<p><strong>Description:</strong> ${destinationInput}</p>`
+      if (country) {
+        // Show country name
+        resultDiv.innerHTML += `<h2>${country.name}</h2>`;
+        // Show cities for that country
+        resultDiv.innerHTML += `<h3>Cities:</h3>`;
+        country.cities.forEach(city => {
+          resultDiv.innerHTML += `
+            <div>
+              <h4>${city.name}</h4>
+              ${city.imageUrl}
+              <p>${city.description}</p>
+            </div>
+          `;
+        });
       } else {
         resultDiv.innerHTML = "GETULIO - Destination not found."
       }
@@ -36,7 +39,7 @@ function searchCondition() {
       resultDiv.innerHTML = "An error occurred while fetching data."
     })
 }
-btnSearch.addEventListener("click", searchCondition)
+btnSearch.addEventListener("click", searchCountry)
 
 function generateReport() {
   const numPatients = patients.length
