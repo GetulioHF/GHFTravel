@@ -77,6 +77,14 @@
     margin-top: 10px;
   }
   
+  outresult {
+    padding: 10px;
+    max-width: 400px;
+    word-wrap: break-word;
+
+
+  }
+
   #report,
   #result {
     padding: 10px;

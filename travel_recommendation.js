@@ -28,7 +28,9 @@ function searchCountry() {
                 <p>${city.description}</p>
             </div>`});
       } else {
-        resultDiv.innerHTML = "GETULIO - Destination not found."
+//        <outresult>
+        resultDiv.innerHTML = "Destination not found."
+//        </outresult>
       }
     })
     .catch((error) => {
@@ -58,5 +60,3 @@ function generateReport() {
   }
 
 }
-
-// addPatientButton.addEventListener("click", addPatient)
