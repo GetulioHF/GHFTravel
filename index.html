@@ -19,7 +19,7 @@
             background-image: url('Travel_image.jpeg');
             background-size: cover;
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: auto;
         }
         /* Center text horizontally and vertically NÃO PRECISO DELE DEPOIS */
         .center-text {
@@ -38,6 +38,7 @@
             font-size: 25px;
             color: white;
         }
+        /* This was included by me (Getulio) */
         .absolute-text2 {
             position: absolute;
             top: 200px;
@@ -45,9 +46,9 @@
             font-size: 25px;
             color: red;
         }
-
     </style>
 </head>
+
 <body>
     <nav>
         <div class="logo">
@@ -70,8 +71,7 @@
     <div class="container">
         <div class="absolute-text">
             <h1><p>FIND YOUR</p><p>SPECIAL PLACE</p></h1>
-            <h5>Seek out new experiences and cherish them 
-                <p>in your memory for a lifetime</p></h5> 
+            <h5>Seek out new experiences and cherish them <p>in your memory for a lifetime</p></h5> 
         </div>
     </div>
     <div class="absolute-text2">
@@ -82,6 +82,12 @@
     <div class="searchCountry">
         <div id="result"></div>
     </div>
+
+    <!-- Include by me -->
+    <section id="results" class="results"></section> 
+    <footer>(C) GHF Travel Company</footer>
+
     <script src="./travel_recommendation.js"></script>
 </body>
+
 </html>

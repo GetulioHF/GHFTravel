@@ -73,14 +73,6 @@
     margin-top: 10px;
   }
   
-  outresult {
-    padding: 10px;
-    max-width: 400px;
-    word-wrap: break-word;
-
-
-  }
-
   #report,
   #result {
     padding: 10px;
@@ -99,4 +91,41 @@
     width: 200px;
     height: 100px;
   }
+  
+  .results {
+    max-width: 800px;
+    margin: 4rem auto;        /* centers the block on the page */
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+
+  .results-fixed {
+    position: fixed;   /* fixed relative to the viewport */
+    top: 16px;
+    right: 16px;
+    width: 320px;
+    max-height: 70vh;
+    overflow: auto;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    padding: 1rem;
+    z-index: 1000;     /* keep it above other elements */
+  }
+  
+
+
+  .city-card {
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+  }
+  .city-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: .5rem 0;
   

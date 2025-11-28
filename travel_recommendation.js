@@ -19,12 +19,11 @@ function searchCountry() {
       if (country) {
         country.cities.forEach(city => {resultDiv.innerHTML += `
             <h4>${city.name}</h4>
-            ${city.imageUrl}
+            <img scr="${city.imageUrl}"
             <p>${city.description}</p>
         `});
       } else {
         resultDiv.innerHTML = "Destination not found."
-//        </outresult>
       }
     })
     .catch((error) => {
