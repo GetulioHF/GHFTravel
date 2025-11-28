@@ -32,8 +32,15 @@
     text-decoration: none;
     color: #be0d0d;
     font-weight: bold;
+    transition: color 0.3s;
   }
-  
+ 
+  a:hover {
+    color: #007BFF;     /* Change text color */
+    font-size: 1.2em;     /* Slightly enlarge text */
+    cursor: pointer;      /* Show pointer cursor */
+  }
+  :
   /* Basic CSS for the form elements */
   body {
     font-family: Arial, sans-serif;
