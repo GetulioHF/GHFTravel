@@ -96,12 +96,11 @@
     max-width: 800px;
     margin: 4rem auto;        /* centers the block on the page */
     padding: 1rem;
-    background: #fff;
-    border: 1px solid #ddd;
+    background: #d8c0c0;
+    border: 1px solid #642ddb;
     border-radius: 8px;
   }
   
-
   .results-fixed {
     position: fixed;   /* fixed relative to the viewport */
     top: 16px;

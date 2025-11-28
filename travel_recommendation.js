@@ -19,7 +19,7 @@ function searchCountry() {
       if (country) {
         country.cities.forEach(city => {resultDiv.innerHTML += `
             <h4>${city.name}</h4>
-            <img scr="${city.imageUrl}"
+            <img src="${city.imageUrl}" alt="${city.name}"
             <p>${city.description}</p>
         `});
       } else {
