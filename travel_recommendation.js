@@ -18,9 +18,9 @@ function searchCountry() {
 
       if (country) {
         // Show country name
-        resultDiv.innerHTML += `<h2>${country.name}</h2>`;
+        // resultDiv.innerHTML += `<h2>${country.name}</h2>`;
         // Show cities for that country
-        resultDiv.innerHTML += `<h3>Cities:</h3>`;
+        // resultDiv.innerHTML += `<h3>Cities:</h3>`;
         country.cities.forEach(city => {resultDiv.innerHTML += `
             <div>
                 <h4>${city.name}</h4>
