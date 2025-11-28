@@ -18,9 +18,9 @@ function searchCountry() {
 
       if (country) {
         country.cities.forEach(city => {resultDiv.innerHTML += `
-            <h4>${city.name}</h4>
+            <h3>${city.name}</h3>
             <img src="${city.imageUrl}" alt="${city.name}" 
-            <p>${city.description}</p>
+            <p>${city.description}</p><br>
         `});
       } else {
         resultDiv.innerHTML = "Destination not found."
