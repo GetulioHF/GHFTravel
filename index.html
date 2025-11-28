@@ -6,13 +6,14 @@
     <link rel="stylesheet" href="./travel_recommendation.css">
     <style>
         h1 {
-            display: inline-block;        /* Makes the border fit the text */
-            padding: 10px 20px;          /* Space around the text */
-            border: 2px solid #333;      /* Border around the text */
+            display: inline-block;          /* Makes the border fit the text */
+            padding: 10px 20px;             /* Space around the text */
+            border: 2px solid #333;         /* Border around the text */
             border-color: red;
-            border-radius: 20px;         /* Rounded corners */
-            background-color: transparent;   /* Optional background */
+            border-radius: 20px;            /* Rounded corners */
+            background-color: transparent;  /* Optional background */
             font-family: Arial, sans-serif;
+            margin-bottom: 15px;            /* Space between phrases */
         }
         body {
             background-image: url('Travel_image.jpeg');
@@ -37,6 +38,14 @@
             font-size: 25px;
             color: white;
         }
+        .absolute-text2 {
+            position: absolute;
+            top: 200px;
+            left: 800px;
+            font-size: 25px;
+            color: red;
+        }
+
     </style>
 </head>
 <body>
@@ -63,11 +72,15 @@
             <h1><p>FIND YOUR</p><p>SPECIAL PLACE</p></h1>
             <h5>Seek out new experiences and cherish them 
                 <p>in your memory for a lifetime</p></h5> 
-        <div id="report"></div>
+        </div>
     </div>
-<!--    <div class="searchCondition">  -->
+    <div class="absolute-text2">
+        <h2>Test ---------x-------</h2>
+    </div>
+
+    <!--    <div class="searchCondition">  -->
     <div class="searchCountry">
-            <div id="result"></div>
+        <div id="result"></div>
     </div>
     <script src="./travel_recommendation.js"></script>
 </body>
