@@ -30,13 +30,14 @@
   
   nav a {
     text-decoration: none;
-    color: #be0d0d;
+    color: #7f45f2;
     font-weight: bold;
     transition: color 0.3s;
   }
  
+  /* Hover serve para a reação do texto ao ponteiro do mouse */
   a:hover {
-    color: #007BFF;     /* Change text color */
+    color: #cf3535;     /* Change text color */
     font-size: 1.2em;     /* Slightly enlarge text */
     cursor: pointer;      /* Show pointer cursor */
   }
@@ -93,7 +94,7 @@
     max-height: 70vh;
     overflow-y: auto;
     border: 1px #ffffff #ccc;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0);
     padding: 10px;
   }
 
