@@ -16,22 +16,23 @@
   
   nav ul {
     list-style: none;
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding: 0;
   }
   
   nav ul li {
     display: inline;
+    display: flex;
+    justify-content: center;
     font-style: Bold;
     font-family: 'Lucida Sans';
     margin-right: 20px;
   }
   
   nav a {
+    margin: 0 15px;
     text-decoration: none;
     color: #7f45f2;
     font-weight: bold;
@@ -59,8 +60,17 @@
     width: 100px;
   }
   
-  input[type="text"],
-  input[type="number"],
+  input[type="text"] {
+    width: 300px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #4CAF50;
+    border-radius: 25px;        /* rounded corners */
+    outline: none;
+    transition: all 0.3s ease;  /* smooth animation */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
   select {
     width: 200px;
     padding: 5px;
@@ -68,10 +78,12 @@
   /* comportamento da cor e forma dos botões */
   button {
     padding: 5px 15px;
+    font-size: 14px;
     background-color: #110eac;
     color: white;
     border: round;
     cursor: pointer;
+    box-shadow: 0 4px 6px;
   }
   /* altera cor conforme coloca-se o ponteiro do mouse */
   button:hover {
