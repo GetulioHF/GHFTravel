@@ -47,7 +47,39 @@
             "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
           }
         ]
-      }
+      },
+      {
+        "id": 4,
+        "name": "Italy",
+        "cities": [
+            {
+            "name": "Venice, Italy",
+            "imageUrl": "./Italy_Venice.jpg",
+            "description": "A city known for its romantic atmosphere."
+            },
+            {
+            "name": "Pisa, Italy",
+            "imageUrl": "./Italy_Pisa.jpg",
+            "description": "The most famous 'tilted' tower in the world."
+            }
+        ]
+        },
+        {
+        "id": 5,
+        "name": "France",
+        "cities": [
+            {
+            "name": "Paris, France",
+            "imageUrl": "./France_Paris.jpg",
+            "description": "Discover the world's most famous tower and its most charming cafes."
+            },
+            {
+            "name": "Louvre, France",
+            "imageUrl": "./France_Louvre.jpg",
+            "description": "Discover the most famous works of art and their ancient mysteries."
+            }
+        ]
+        }
     ],
     "temples": [
       {
