@@ -101,8 +101,8 @@
   /* Tela de resultado (getulio) */
   #result {
     position: fixed;
-    top: 120px;       /* distance from top */
-    right: 100px;     /* distance from right */
+    top: 100px;       /* distance from top */
+    right: 165px;     /* distance from right */
     width: 300px;
     max-height: 70vh;
     overflow-y: auto;
@@ -112,7 +112,7 @@
   }
 
   #result img {
-    width: auto;
+    width: 280px;
     height: auto;
     border: 5px solid #4CAF50;
     border-radius: 15px;

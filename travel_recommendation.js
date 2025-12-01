@@ -16,7 +16,7 @@ function searchCountry() {
         const country = data.countries.find((item) => item.name.toLowerCase() === input);
         if (country) {
             country.cities.forEach(city => {resultDiv.innerHTML += `
-                <h3>${city.name}</h3>
+                <h2>${city.name}</h2>
                 <img src="${city.imageUrl}" alt="${city.name}" 
                 <p>${city.description}</p><br>
             `});
