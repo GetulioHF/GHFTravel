@@ -164,3 +164,28 @@
     font-family: Cambria;
     font-size: larger;
   }
+
+  .social-medias {
+    position: fixed;       /* stays in place even when scrolling */
+    bottom: 20px;          /* distance from bottom */
+    left: 20px;            /* distance from left */
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    gap: 10px;             /* space between icons */
+  }
+  
+  .social-medias a {
+    color: white;          /* icon color */
+    background: #333;      /* background circle */
+    padding: 10px;
+    border-radius: 50%;    /* round shape */
+    text-align: center;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+  
+  .social-medias a:hover {
+    background: #4CAF50;   /* hover effect */
+    color: #fff;
+  }
+  
