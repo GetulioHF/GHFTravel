@@ -1,12 +1,10 @@
-/* Basic CSS for the navigation bar */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   nav {
-    background-color: #f0f0ff;
+    background-color: #c2c2d3;
     padding: 5px;
     display: flex;
     align-items: center;
@@ -17,8 +15,13 @@
   }
   
   nav ul {
-    list-style-type: none;
-    /* padding: 0; */
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
   }
   
   nav ul li {
@@ -35,17 +38,16 @@
     transition: color 0.3s;
   }
  
-  /* Hover serve para a reação do texto ao ponteiro do mouse */
+  /* Hover stands for text reaction when mouse pointer is over text */
   a:hover {
     color: #cf3535;     /* Change text color */
     font-size: 1.2em;     /* Slightly enlarge text */
     cursor: pointer;      /* Show pointer cursor */
   }
   
-  /* Basic CSS for the form elements */
+  /* Form elements */
   body {
     font-family: Arial, sans-serif;
-    /* margin: 20px; */
   }
   
   div {
@@ -76,8 +78,7 @@
     background-color: #10c9c9;
   }
   
-  /* Basic CSS for the report section */
-  
+  /* CSS report section */
   #report,
   #result {
     padding: 10px;
@@ -106,7 +107,7 @@
   /* verificar se os dois .result abaixo servem para alguma - deletar se não */
   .results {
     max-width: 800px;
-    margin: 4rem auto;        /* centers the block on the page */
+    margin: 4rem auto;    
     padding: 1rem;
     background: #d8c0c0;
     border: 1px solid #642ddb;
@@ -114,7 +115,7 @@
   }
   
   .results-fixed {
-    position: fixed;   /* fixed relative to the viewport */
+    position: fixed;
     top: 16px;
     right: 16px;
     width: 320px;
@@ -125,7 +126,7 @@
     border-radius: 8px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.1);
     padding: 1rem;
-    z-index: 1000;     /* keep it above other elements */
+    z-index: 1000;    
   }
 
   /* Modal definitions */
