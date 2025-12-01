@@ -13,20 +13,20 @@ function searchCountry() {
   fetch('travel_recommendation.json')
     .then(response => response.json())
     .then(data => {
-      const country = data.countries.find((item) => item.name.toLowerCase() === input);
-      if (country) {
-        country.cities.forEach(city => {resultDiv.innerHTML += `
-            <h3>${city.name}</h3>
-            <img src="${city.imageUrl}" alt="${city.name}" 
-            <p>${city.description}</p><br>
-        `});
+        const country = data.countries.find((item) => item.name.toLowerCase() === input);
+        if (country) {
+            country.cities.forEach(city => {resultDiv.innerHTML += `
+                <h3>${city.name}</h3>
+                <img src="${city.imageUrl}" alt="${city.name}" 
+                <p>${city.description}</p><br>
+            `});
       } else {
         resultDiv.innerHTML = "Destination not found."
       }
     })
     .catch((error) => {
-      console.error("Error:", error)
-      resultDiv.innerHTML = "An error occurred while fetching data."
+        console.error("Error:", error)
+        resultDiv.innerHTML = "An error occurred while fetching data."
     })
 }
 btnSearch.addEventListener("click", searchCountry)

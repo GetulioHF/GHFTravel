@@ -7,22 +7,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         h1 {
-            display: inline-block;          /* Makes the border fit the text */
-            padding: 10px 20px;             /* Space around the text */
-            border: 2px solid #333;         /* Border around the text */
+            display: inline-block;
+            padding: 10px 20px; 
+            border: 2px solid #333; 
             border-color: red;
-            border-radius: 20px;            /* Rounded corners */
-            background-color: transparent;  /* Optional background */
+            border-radius: 20px; 
+            background-color: transparent; 
             font-family: Arial, sans-serif;
             color: red;
-            margin-bottom: 15px;            /* Space between phrases */
+            margin-bottom: 15px;
+        }
+        h2 {
+            font-family: Lucida;
+            color: black;
+            border-radius: 15px;
+            border: 5px solid #4caf50;
         }
         h3 {
             font-family: Lucida;
-            color: black;
-        }
-        h5 {
-            font-family: Arial;
             color: black;
         }
         body {
@@ -36,7 +38,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Full viewport height */
+            height: 100vh; 
             font-size: 24px;
             background-color: #f0f0f0;
         }
@@ -58,7 +60,6 @@
         }
     </style>
 </head>
-
 <body>
     <nav>
         <div class="logo">
@@ -71,23 +72,22 @@
         <h3>GHF Travel</h3></div>
         <ul>
             <li><a href="#" onclick="document.getElementById('aboutModal').style.display='block'">About Us</a>
-                <a href="#" onclick="document.getElementById('contactModal').style.display='block'">Contact Us</a></li>
+                <a href="#" onclick="document.getElementById('contactModal').style.display='block'">Contact Us</a>
+            </li>
         </ul>
         <ul>
             <li><input type="text" id="destinationInput" placeholder="Enter a destination">
                 <button id='btnSearch'>Search</button>
-                <button onclick="document.getElementById('destinationInput').value=''">Clear</button></li>
+                <button onclick="document.getElementById('destinationInput').value=''">Clear</button>
+            </li>
         </ul>
     </nav>
-    
     <div class="social-medias">
         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
         <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
     </div>
-      
-
     <!-- Modal for CONTACT ---------------------------------------------------------------------->
     <div id="contactModal" class="modal">
         <div class="modal-content">
@@ -106,7 +106,6 @@
         <p>We are a group of people seeking to satisfy your curiosity about the world and its beauty.</p>
         </div>
     </div>    
-
     <div class="container">
         <div class="absolute-text">
             <h1><p>FIND YOUR</p><p>SPECIAL PLACE</p></h1>
@@ -118,5 +117,4 @@
     </div>
     <script src="./travel_recommendation.js"></script>
 </body>
-
 </html>

@@ -114,6 +114,8 @@
   #result img {
     width: auto;
     height: auto;
+    border: 5px solid #4CAF50;
+    border-radius: 15px;
   }
 
   /* verificar se os dois .result abaixo servem para alguma - deletar se não */
