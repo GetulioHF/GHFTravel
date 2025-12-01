@@ -69,39 +69,33 @@
             />
         <h3>GHF Travel</h3></div>
         <ul>
-            <a href="#">Home</a>
+            <a href="#" onclick="document.getElementById('homeModal').style.display='block'">Home</a>
             <a href="#" onclick="document.getElementById('aboutModal').style.display='block'">About Us</a>
-            <a href="#">Contact</a>
+            <a href="#" onclick="document.getElementById('contactModal').style.display='block'">Contact Us</a>
             <li><input type="text" id="destinationInput" placeholder="Enter a destination">  </li>
             <li><button id='btnSearch'>Search</button></li>
             <li><button id='btnClear'>Clear</button></li>
         </ul>
     </nav>
     
-  <!-- Modal -->
-  <div id="aboutModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="document.getElementById('aboutModal').style.display='none'">&times;</span>
-      <h2>About Us</h2>
-      <p>
-        We are a group of people seeking to satisfy your curiosity about the world and its beauty.
-      </p>
-      <p>
-        Contact us at <a href="mailto:info@example.com">info@example.com</a>.
-      </p>
-    </div>
-  </div>    
-  <script>
-    // Close modal when clicking outside of it
-    window.onclick = function(event) {
-      const modal = document.getElementById('aboutModal');
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
-  
-
+    <!-- Modal for CONTACT ---------------------------------------------------------------------->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+        <span class="close" onclick="document.getElementById('contactModal').style.display='none'">&times;</span>
+        <h2>Contact Us</h2><br>
+        <p>Call us or send us an e-mail, anytime, anywhere, 24 hours a day!</p>
+        <p>Phone: +55-11-9999-9999</p>
+        <p>e-mail: ghftravel@wearehere.com.br</p>
+        </div>
+    </div>    
+    <!-- Modal for ABOUT ---------------------------------------------------------------------->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+        <span class="close" onclick="document.getElementById('aboutModal').style.display='none'">&times;</span>
+        <h2>About Us</h2><br>
+        <p>We are a group of people seeking to satisfy your curiosity about the world and its beauty.</p>
+        </div>
+    </div>    
 
     <div class="container">
         <div class="absolute-text">
