@@ -35,7 +35,7 @@ function searchCountry() {
         resultDiv.innerHTML = "An error occurred while fetching data."
     })
 }
-// SEARCH TEMPLE SECTION ==================================================================
+// SEARCH TEMPLES SECTION ==================================================================
 function listTemples() {
     // Make sure this ID exists in your HTML: <div id="templeResult"></div>
     const resultDiv = document.getElementById("templeResult");
@@ -71,6 +71,41 @@ function listTemples() {
         });
 }
   
+// SEARCH BEACHES SECTION ==================================================================
+function listBeaches() {
+    // Make sure this ID exists in your HTML: <div id="beachResult"></div>
+    const resultDiv = document.getElementById("beachResult");
+    resultDiv.innerHTML = "";
+
+    fetch('travel_recommendation.json')
+        .then(response => {
+            // Always check that the response is OK before parsing
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Verify the JSON structure
+            if (data.beaches && Array.isArray(data.beaches) && data.beaches.length > 0) {
+                let html = "";
+                data.beaches.forEach(beach => {
+                    html += `
+                        <h2>${beach.name}</h2>
+                        <img src="${beach.imageUrl}" alt="Image of ${beach.name}">
+                        <p>${beach.description}</p><br>
+                    `;
+                });
+                resultDiv.innerHTML = html;
+            } else {
+                resultDiv.innerHTML = "Beaches not found.";
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            resultDiv.innerHTML = "An error occurred while fetching data.";
+        });
+}
 
 
 
