@@ -2,8 +2,6 @@
 // GetulioHF - Travel Recommendation Web Application
 //--------------------------------------------------- 
 const btnSearch = document.getElementById("btnSearch")
-const btnTemple = document.getElementById("btnTemple")
-const btnBeach = document.getElementById("btnBeach")
 const destinationInput = []
 
 function btnClear() {
@@ -24,8 +22,8 @@ function searchCountry() {
                 country.cities.forEach(city => {resultDiv.innerHTML += `
                     <h2>${city.name}</h2>
                     <img src="${city.imageUrl}" alt="${city.name}" 
-                    <p><h4>${city.description}</h4></p><br>
-                `});
+                    <p><h4>${city.description}</h4></p><br>`
+                })
         } else {
             resultDiv.innerHTML = "Destination not found or not informed."
         }
@@ -45,9 +43,9 @@ function listTemples() {
             if (data.temples && Array.isArray(data.temples) && data.temples.length > 0) {
                 data.temples.forEach(temple => {resultDiv.innerHTML += `
                     <h2>${temple.name}</h2>
-                    <img src="${temple.imageUrl}" alt="Image of ${temple.name}">
-                    <p>${temple.description}</p><br>
-            `})};
+                    <img src="${temple.imageUrl}" alt="${temple.name}">
+                    <p><h4>${temple.description}</h4></p><br>`
+                })}
         })
     .catch(error => {
         console.error("Error:", error);
@@ -64,9 +62,9 @@ function listBeaches() {
             if (data.beaches && Array.isArray(data.beaches) && data.beaches.length > 0) {
                 data.beaches.forEach(beach => {resultDiv.innerHTML += `
                     <h2>${beach.name}</h2>
-                    <img src="${beach.imageUrl}" alt="Image of ${beach.name}">
-                    <p>${beach.description}</p><br>
-            `})}
+                    <img src="${beach.imageUrl}" alt="${beach.name}">
+                    <p><h4>${beach.description}</h4></p><br>`
+                })}
         })
     .catch(error => {
         console.error("Error:", error);
