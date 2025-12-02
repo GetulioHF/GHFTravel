@@ -42,9 +42,11 @@ function listTemples() {
         .then(data => {
             if (data.temples && Array.isArray(data.temples) && data.temples.length > 0) {
                 data.temples.forEach(temple => {resultDiv.innerHTML += `
+                <div class="resultBox">
                     <h2>${temple.name}</h2>
                     <img src="${temple.imageUrl}" alt="${temple.name}">
-                    <p><h4>${temple.description}</h4></p><br>`
+                    <p><h4>${temple.description}</h4></p><br>
+                </div>`
                 })}
         })
     .catch(error => {
@@ -61,9 +63,11 @@ function listBeaches() {
         .then(data => {
             if (data.beaches && Array.isArray(data.beaches) && data.beaches.length > 0) {
                 data.beaches.forEach(beach => {resultDiv.innerHTML += `
+                <div class="resultBox">
                     <h2>${beach.name}</h2>
                     <img src="${beach.imageUrl}" alt="${beach.name}">
-                    <p><h4>${beach.description}</h4></p><br>`
+                    <p><h4>${beach.description}</h4></p><br>
+                </div>`
                 })}
         })
     .catch(error => {
