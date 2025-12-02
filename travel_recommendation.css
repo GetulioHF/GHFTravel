@@ -1,3 +1,6 @@
+/*---------------------------------------------------
+   GetulioHF - Travel Recommendation Web Application
+----------------------------------------------------*/ 
 * {
     margin: 0;
     padding: 0;
@@ -62,10 +65,6 @@
     transition: all 0.3s ease;  /* smooth animation */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
-/*  select {
-    width: 200px;
-    padding: 5px;
-  }*/
   /* comportamento da cor e forma dos botões */
   button {
     padding: 5px 15px;
@@ -105,29 +104,6 @@
     border: 2px solid #0f3ee7;
     border-radius: 3px;
   }
-  /* verificar se os dois .result abaixo servem para alguma - deletar se não */
-  .results {
-    max-width: 800px;
-    margin: 4rem auto;    
-    padding: 1rem;
-    background: #d8c0c0;
-    border: 1px solid #642ddb;
-    border-radius: 8px;
-  }
-  .results-fixed {
-    position: fixed;
-    top: 16px;
-    right: 16px;
-    width: 320px;
-    max-height: 70vh;
-    overflow: auto;
-    background: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    padding: 1rem;
-    z-index: 1000;    
-  }
   /* Modal definitions */
   .modal {
     display: none; 
@@ -140,8 +116,8 @@
     background-color: rgba(0,0,0,0.5);
   }
   .modal-content {
-    background-color: #4513dd;
-    margin: 10% auto;
+    background-color: #c0eac0;
+    margin: 5% auto;
     padding: 20px;
     border-radius: 8px;
     width: 60%;
@@ -159,8 +135,8 @@
     gap: 10px;             
   }
   .social-medias a {
-    color: white;          
-    background: #333;      
+    color: rgb(143, 177, 235);          
+    background: #0d5362;      
     padding: 10px;
     border-radius: 50%;    
     text-align: center;

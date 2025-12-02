@@ -1,3 +1,6 @@
+//---------------------------------------------------
+// GetulioHF - Travel Recommendation Web Application
+//--------------------------------------------------- 
 const btnSearch = document.getElementById("btnSearch")
 const destinationInput = []
 
