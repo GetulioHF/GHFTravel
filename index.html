@@ -85,6 +85,8 @@
             <li><input type="text" id="destinationInput" placeholder="Enter a Country">
                 <button id='btnSearch'>Search</button>
                 <button onclick="document.getElementById('destinationInput').value=''">Clear</button>
+                <button onclick="document.getElementById('templeInput').value=''">Temples</button>
+                <button onclick="document.getElementById('beachInput').value=''">Beaches</button>
             </li>
         </ul>
     </nav>
@@ -123,6 +125,12 @@
         </div>
     </div>
     <div class="searchCountry">
+        <div id="result"></div>
+    </div>
+    <div class="searchTemple">
+        <div id="result"></div>
+    </div>
+    <div class="searchBeach">
         <div id="result"></div>
     </div>
     <script src="./travel_recommendation.js"></script>
