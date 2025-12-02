@@ -3,17 +3,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>GHF Travel</title>
+    <link rel="stylesheet" href="./travel_recommendation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        h2 {
+            padding: 5px 20px
+        }
+        h3 {
+            padding: 1px 20px;
+            font-family: Lucida;
+            color: black;
+        }
+        body {
+            background-image: url('Travel_image.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: auto;
+        }
+    </style>
 </head>
 <body>
-    <style>
-    body {
-        background: url('./Travel_image.jpg') no-repeat center center fixed;
-        background-size: cover;
-        font-family: Arial, sans-serif;
-    }
-    </style>
     <nav>
         <div class="logo">
             <img
@@ -24,25 +34,16 @@
             />
         <h3>GHF Travel</h3></div>
         <ul>
-            <li><a href="#" onclick="history.back(); return false;">Home</a>
-                <a href="#" onclick="document.getElementById('aboutModal').style.display='block'">About Us</a>
-                <a href="./travel_recommendation_contactus.html" onclick="document.getElementById('contactModal').style.display='block'">Contact Us</a>
-            </li>
+            <li><a href="#" onclick="history.back(); return false;">Home</a></li>
         </ul>
     </nav>
-    <h1>Contact Us</h1>
-    submit_form.php
-        <label for="name">Name:</label><br>
+    <br><h2>Contact Us</h2><br>
+        <label for="name"><h3>Name</h3></label><br>
         <input type="text" id="name" name="name" required><br><br>
-
-        <label for="email">Email:</label><br>
+        <label for="email"><h3>Email</h3></label><br>
         <input type="email" id="email" name="email" required><br><br>
-
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br><br>
-
-        <button type="submit">Send</button>
-    </form>
+        <label for="message"><h3>Your message</h3></label><br>
+        <textarea id="message" name="message" rows="5" cols="60" required></textarea><br><br>
+        <button type="submit">Submit</button>
 </body>
-
 </html>

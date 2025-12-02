@@ -65,7 +65,6 @@
     transition: all 0.3s ease;  /* smooth animation */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
-  /* comportamento da cor e forma dos botões */
   button {
     padding: 5px 15px;
     font-size: 14px;
@@ -75,7 +74,6 @@
     cursor: pointer;
     box-shadow: 0 4px 6px;
   }
-  /* altera cor conforme coloca-se o ponteiro do mouse */
   button:hover {
     background-color: #10c9c9;
   }
