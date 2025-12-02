@@ -13,7 +13,6 @@
   nav .logo img {
     height: 50px;
   }
-  
   nav ul {
     list-style: none;
     display: flex;
@@ -21,7 +20,6 @@
     align-items: center;
     gap: 20px;
   }
-  
   nav ul li {
     display: inline;
     display: flex;
@@ -30,56 +28,49 @@
     font-family: 'Lucida Sans';
     margin-right: 20px;
   }
-  
   nav a {
     margin: 0 15px;
     text-decoration: none;
-    color: #7f45f2;
+    color: #0f3ee7;
     font-weight: bold;
     transition: color 0.3s;
   }
- 
   /* Hover stands for text reaction when mouse pointer is over text */
   a:hover {
     color: #cf3535;     /* Change text color */
     font-size: 1.2em;     /* Slightly enlarge text */
     cursor: pointer;      /* Show pointer cursor */
   }
-  
   /* Form elements */
   body {
     font-family: Arial, sans-serif;
   }
-  
   div {
     margin-bottom: 5px;
   }
-  
   label {
     display: inline-block;
     width: 100px;
   }
-  
   input[type="text"] {
     width: 300px;
     padding: 12px 20px;
     font-size: 16px;
-    border: 2px solid #4CAF50;
+    border: 2px solid #0f3ee7;
     border-radius: 25px;        /* rounded corners */
     outline: none;
     transition: all 0.3s ease;  /* smooth animation */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
-
-  select {
+/*  select {
     width: 200px;
     padding: 5px;
-  }
+  }*/
   /* comportamento da cor e forma dos botões */
   button {
     padding: 5px 15px;
     font-size: 14px;
-    background-color: #110eac;
+    background-color: #0f3ee7;
     color: white;
     border: round;
     cursor: pointer;
@@ -89,7 +80,6 @@
   button:hover {
     background-color: #10c9c9;
   }
-  
   /* CSS report section */
   #report,
   #result {
@@ -97,12 +87,11 @@
     max-width: 400px;
     word-wrap: break-word;
   }
-
   /* Tela de resultado (getulio) */
   #result {
     position: fixed;
-    top: 100px;       /* distance from top */
-    right: 165px;     /* distance from right */
+    top: 100px;       
+    right: 165px;    
     width: 300px;
     max-height: 70vh;
     overflow-y: auto;
@@ -110,14 +99,12 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0);
     padding: 10px;
   }
-
   #result img {
     width: 280px;
     height: auto;
-    border: 5px solid #4CAF50;
-    border-radius: 15px;
+    border: 2px solid #0f3ee7;
+    border-radius: 3px;
   }
-
   /* verificar se os dois .result abaixo servem para alguma - deletar se não */
   .results {
     max-width: 800px;
@@ -127,7 +114,6 @@
     border: 1px solid #642ddb;
     border-radius: 8px;
   }
-  
   .results-fixed {
     position: fixed;
     top: 16px;
@@ -142,7 +128,6 @@
     padding: 1rem;
     z-index: 1000;    
   }
-
   /* Modal definitions */
   .modal {
     display: none; 
@@ -154,9 +139,8 @@
     height: 100%;
     background-color: rgba(0,0,0,0.5);
   }
-
   .modal-content {
-    background-color: #acd06e;
+    background-color: #4513dd;
     margin: 10% auto;
     padding: 20px;
     border-radius: 8px;
@@ -166,28 +150,24 @@
     font-family: Cambria;
     font-size: larger;
   }
-
   .social-medias {
-    position: fixed;       /* stays in place even when scrolling */
-    bottom: 20px;          /* distance from bottom */
-    left: 20px;            /* distance from left */
+    position: fixed;       
+    bottom: 20px;          
+    left: 20px;            
     display: flex;
-    flex-direction: column; /* stack vertically */
-    gap: 10px;             /* space between icons */
+    flex-direction: column; 
+    gap: 10px;             
   }
-  
   .social-medias a {
-    color: white;          /* icon color */
-    background: #333;      /* background circle */
+    color: white;          
+    background: #333;      
     padding: 10px;
-    border-radius: 50%;    /* round shape */
+    border-radius: 50%;    
     text-align: center;
     font-size: 18px;
     transition: 0.3s;
   }
-  
   .social-medias a:hover {
-    background: #4CAF50;   /* hover effect */
+    background: #0f3ee7;   
     color: #fff;
-  }
-  
+  }  

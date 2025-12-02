@@ -18,10 +18,10 @@ function searchCountry() {
             country.cities.forEach(city => {resultDiv.innerHTML += `
                 <h2>${city.name}</h2>
                 <img src="${city.imageUrl}" alt="${city.name}" 
-                <p>${city.description}</p><br>
+                <p><h4>${city.description}</h4></p><br>
             `});
       } else {
-        resultDiv.innerHTML = "Destination not found."
+        resultDiv.innerHTML = "Destination not found. We may not have that destination saved."
       }
     })
     .catch((error) => {
