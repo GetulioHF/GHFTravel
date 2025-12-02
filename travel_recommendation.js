@@ -33,7 +33,7 @@ function searchCountry() {
     .catch((error) => {
         console.error("Error:", error)
         resultDiv.innerHTML = "An error occurred while fetching data."
-    })
+    });
 }
 // SEARCH TEMPLES SECTION ==================================================================
 function listTemples() {
@@ -43,20 +43,16 @@ function listTemples() {
         .then(response => response.json())
         .then(data => {
             if (data.temples && Array.isArray(data.temples) && data.temples.length > 0) {
-                data.temples.forEach(temple => {
-                    resultDiv.innerHTML += `
-                        <h2>${temple.name}</h2>
-                        <img src="${temple.imageUrl}" alt="Image of ${temple.name}">
-                        <p>${temple.description}</p><br>
-                `});
-            } else {
-                resultDiv.innerHTML = "Temples not found.";
-            }
+                data.temples.forEach(temple => {resultDiv.innerHTML += `
+                    <h2>${temple.name}</h2>
+                    <img src="${temple.imageUrl}" alt="Image of ${temple.name}">
+                    <p>${temple.description}</p><br>
+            `})};
         })
-        .catch(error => {
-            console.error("Error:", error);
-            resultDiv.innerHTML = "An error occurred while fetching data.";
-        });
+    .catch(error => {
+        console.error("Error:", error);
+        resultDiv.innerHTML = "An error occurred while fetching data.";
+    });
 }
 // SEARCH BEACHES SECTION ==================================================================
 function listBeaches() {
@@ -66,23 +62,17 @@ function listBeaches() {
         .then(response => response.json())
         .then(data => {
             if (data.beaches && Array.isArray(data.beaches) && data.beaches.length > 0) {
-                data.beaches.forEach(beach => {
-                    resultDiv.innerHTML += `
-                        <h2>${beach.name}</h2>
-                        <img src="${beach.imageUrl}" alt="Image of ${beach.name}">
-                        <p>${beach.description}</p><br>
-                `});
-            } else {
-                resultDiv.innerHTML = "Beaches not found.";
-            }
+                data.beaches.forEach(beach => {resultDiv.innerHTML += `
+                    <h2>${beach.name}</h2>
+                    <img src="${beach.imageUrl}" alt="Image of ${beach.name}">
+                    <p>${beach.description}</p><br>
+            `})}
         })
-        .catch(error => {
-            console.error("Error:", error);
-            resultDiv.innerHTML = "An error occurred while fetching data.";
-        });
+    .catch(error => {
+        console.error("Error:", error);
+        resultDiv.innerHTML = "An error occurred while fetching data.";
+    });
 }
-
-
 
 btnSearch.addEventListener("click", searchCountry)
 btnTemple.addEventListener("click", searchTemple)
