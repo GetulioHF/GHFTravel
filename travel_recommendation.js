@@ -36,29 +36,39 @@ function searchCountry() {
     })
 }
 // SEARCH TEMPLE SECTION ==================================================================
-function searchTemple() {
-//    const input = document.getElementById("templeInput").value.toLowerCase()
-    const resultDiv = document.getElementById("result")
-    resultDiv.innerHTML = ""
+function listTemples() {
+    // Make sure this ID exists in your HTML: <div id="templeResult"></div>
+    const resultDiv = document.getElementById("templeResult");
+    resultDiv.innerHTML = "";
+
     fetch('travel_recommendation.json')
-        .then(response => response.json())
+        .then(response => {
+            // Always check that the response is OK before parsing
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
         .then(data => {
-            if (data.temples && data.temples.length > 0) {
+            // Verify the JSON structure
+            if (data.temples && Array.isArray(data.temples) && data.temples.length > 0) {
+                let html = "";
                 data.temples.forEach(temple => {
-                    resultDiv.innerHTML += `
+                    html += `
                         <h2>${temple.name}</h2>
-                        <img src="${temple.imageUrl}" alt="${temple.name}">
-                        <p><h4>${temple.description}</h4></p><br>
-                `;
-            });
-        } else {
-            resultDiv.innerHTML = "Temples not found.";
-        }
-    })
-    .catch((error) => {
-        console.error("Error:", error)
-        resultDiv.innerHTML = "An error occurred while fetching data."
-    })
+                        <img src="${temple.imageUrl}" alt="Image of ${temple.name}">
+                        <p>${temple.description}</p><br>
+                    `;
+                });
+                resultDiv.innerHTML = html;
+            } else {
+                resultDiv.innerHTML = "Temples not found.";
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            resultDiv.innerHTML = "An error occurred while fetching data.";
+        });
 }
   
 
