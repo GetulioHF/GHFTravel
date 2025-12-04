@@ -38,8 +38,14 @@ function searchCountry() {
 }
 // SEARCH TEMPLES SECTION ==================================================================
 function listTemples() {
+    if (!sessionStorage.getItem("reloaded")) {
+        sessionStorage.setItem("reloaded", "true");
+        location.reload();   
+        return;
+      }
+    sessionStorage.removeItem("reloaded");
     const resultDiv = document.getElementById("templeResult")
-    resultDiv.innerHTML = "";
+    resultDiv.innerHTML = ""
     fetch('travel_recommendation.json')
         .then(response => response.json())
         .then(data => {
@@ -59,8 +65,14 @@ function listTemples() {
 }
 // SEARCH BEACHES SECTION ==================================================================
 function listBeaches() {
+    if (!sessionStorage.getItem("reloaded")) {
+        sessionStorage.setItem("reloaded", "true");
+        location.reload();   
+        return;
+      }
+    sessionStorage.removeItem("reloaded");
     const resultDiv = document.getElementById("beachResult")
-    resultDiv.innerHTML = "";
+    resultDiv.innerHTML = ""
     fetch('travel_recommendation.json')
         .then(response => response.json())
         .then(data => {
