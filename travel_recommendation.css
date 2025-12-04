@@ -38,11 +38,11 @@
     font-weight: bold;
     transition: color 0.3s;
   }
-  /* Hover stands for text reaction when mouse pointer is over text */
+  /* Hover definitions for buttons ------------------------------------------*/
   a:hover {
-    color: #cf3535;     /* Change text color */
-    font-size: 1.2em;     /* Slightly enlarge text */
-    cursor: pointer;      /* Show pointer cursor */
+    color: #cf3535;    
+    font-size: 1.2em;     
+    cursor: pointer;      
   }
   /* Form elements */
   body {
@@ -103,7 +103,7 @@
     border: 2px solid #0f3ee7;
     border-radius: 3px;
   }
-/* Result section for Temples and Beaches --------------------*/
+/* Result section for Temples --------------------*/
   #templeResult {
     position: fixed;
     top: 100px;
@@ -112,7 +112,7 @@
     max-height: 70vh;
     overflow-y: auto;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 1px #ffffff #ccc;
     box-shadow: 0 4px 12px rgba(0,0,0,0);
     padding: 10px;
   }
@@ -122,7 +122,76 @@
     border: 2px solid #0f3ee7;
     border-radius: 3px;
   }
-/* Modal definitions */
+/* Result section for Beaches --------------------*/
+ #beachResult {
+    position: fixed;
+    top: 100px;
+    right: 50px;   /* adjust as needed */
+    width: 300px;
+    max-height: 70vh;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border: 1px #ffffff #ccc;
+    box-shadow: 0 4px 12px rgba(0,0,0,0);
+    padding: 10px;
+  }
+  #beachResult img {
+    width: 280px;
+    height: auto;
+    border: 2px solid #0f3ee7;
+    border-radius: 3px;
+  }
+
+/* Contact-us box --------------------------------*/
+  .contact-box {
+    max-width: 500px;
+    margin: 40px auto;              
+    padding: 20px 30px;
+    background: #f9f9f9;            
+    border-radius: 10px;            
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+  }
+  .contact-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0f3ee7;                 
+  }
+  .contact-box label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+  .contact-box input,
+  .contact-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+  }
+  .contact-box input:focus,
+  .contact-box textarea:focus {
+    border-color: #0f3ee7;
+    outline: none;
+  }
+  .contact-box button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    background: #0f3ee7;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .contact-box button:hover {
+    background: #0c2bb5;
+  }
+
+/* Modal definitions -------------------------------------------*/
   .modal {
     display: none; 
     position: relative;

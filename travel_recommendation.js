@@ -1,12 +1,13 @@
-//---------------------------------------------------
+//=========================================================================================
 // GetulioHF - Travel Recommendation Web Application
-//--------------------------------------------------- 
+//=========================================================================================
+
 const btnSearch = document.getElementById("btnSearch")
 const destinationInput = []
 
 function btnClear() {
-  document.getElementById("destinationInput").value = ""
-  document.querySelector('input[name="destinationInput"]:checked').checked = false
+    document.getElementById("destinationInput").value = ""
+    document.querySelector('input[name="destinationInput"]:checked').checked = false
 }
 
 // SEARCH COUNTRY SECTION =================================================================
@@ -36,7 +37,7 @@ function searchCountry() {
 // SEARCH TEMPLES SECTION ==================================================================
 function listTemples() {
     const resultDiv = document.getElementById("templeResult")
-    resultDiv.innerHTML = ""
+    resultDiv.innerHTML = "";
     fetch('travel_recommendation.json')
         .then(response => response.json())
         .then(data => {
@@ -57,7 +58,7 @@ function listTemples() {
 // SEARCH BEACHES SECTION ==================================================================
 function listBeaches() {
     const resultDiv = document.getElementById("beachResult")
-    resultDiv.innerHTML = ""
+    resultDiv.innerHTML = "";
     fetch('travel_recommendation.json')
         .then(response => response.json())
         .then(data => {
