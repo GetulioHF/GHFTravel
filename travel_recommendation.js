@@ -45,7 +45,7 @@ function listTemples() {
                 <div class="resultBox">
                     <h2>${temple.name}</h2>
                     <img src="${temple.imageUrl}" alt="${temple.name}">
-                    <p><h4>${temple.description}</h4></p><br>
+                    <p>${temple.description}</p><br>
                 </div>`
                 })}
         })

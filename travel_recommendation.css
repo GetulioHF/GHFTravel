@@ -114,15 +114,10 @@
     padding: 10px;
   }
   .resultBox img {
-    position: fixed;
-    top: 100px;       
-    right: 165px;    
-    width: 300px;
-    max-height: 70vh;
-    overflow-y: auto;
-    border: 1px #ffffff #ccc;
-    box-shadow: 0 4px 12px rgba(0,0,0,0);
-    padding: 10px;
+    width: 280px;
+    height: auto;
+    border: 2px solid #0f3ee7;
+    border-radius: 3px;
   }
 #templeresult img {
     width: 280px;
