@@ -3,6 +3,8 @@
 //=========================================================================================
 
 const btnSearch = document.getElementById("btnSearch")
+const btnTemple = document.getElementById("btnTemple")
+const btnBeach = document.getElementById("btnBeach")
 const destinationInput = []
 
 function btnClear() {
