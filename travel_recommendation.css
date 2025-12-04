@@ -84,7 +84,7 @@
     max-width: 400px;
     word-wrap: break-word;
   }
-  /* Tela de resultado (getulio) */
+  /* Result section for Countries ------------------------------*/
   #result {
     position: fixed;
     top: 100px;       
@@ -102,29 +102,30 @@
     border: 2px solid #0f3ee7;
     border-radius: 3px;
   }
+  /* Result section for Temples and Beaches --------------------*/
   .resultBox {
-    position: fixed;
-    top: 100px;       
-    right: 165px;    
+    top: 100px;
+    right: 165px;
     width: 300px;
-    max-height: 70vh;
     overflow-y: auto;
-    border: 1px #ffffff #ccc;
-    box-shadow: 0 4px 12px rgba(0,0,0,0);
+    margin-bottom: 20px;    
     padding: 10px;
-  }
+    border: 1px solid #ccc;  
+}
   .resultBox img {
     width: 280px;
     height: auto;
     border: 2px solid #0f3ee7;
     border-radius: 3px;
-  }
+}
+/*
 #templeresult img {
     width: 280px;
     height: auto;
     border: 2px solid #0f3ee7;
     border-radius: 3px;
-  }
+}
+*/
 /* Modal definitions */
   .modal {
     display: none; 
